@@ -1,7 +1,6 @@
+import { LOST_BATTLE, WIN_BATTLE } from '../constants';
 import Fighter, { SimpleFighter } from '../Fighter';
 import Battle from './Battle';
-
-const LOST_BATTLE = -1;
 
 class PVE extends Battle {
   constructor(
@@ -21,7 +20,9 @@ class PVE extends Battle {
         monster.attack(this._character);
       });
     }
-    return this._character.lifePoints === LOST_BATTLE ? -1 : 1;
+    return this._character.lifePoints === LOST_BATTLE
+      ? LOST_BATTLE
+      : WIN_BATTLE;
   }
 }
 
