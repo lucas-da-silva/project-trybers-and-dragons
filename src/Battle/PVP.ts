@@ -8,7 +8,7 @@ class PVP extends Battle {
     private _firstCharacter: Fighter,
     private _secondCharacter: Fighter,
   ) {
-    super();
+    super(_firstCharacter);
   }
 
   fight(): number {

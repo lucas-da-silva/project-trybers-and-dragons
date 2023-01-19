@@ -8,7 +8,7 @@ class PVE extends Battle {
     private _character: Fighter,
     private _monsters: (SimpleFighter | Fighter)[],
   ) {
-    super();
+    super(_character);
   }
 
   fight(): number {
